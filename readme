@@ -1,13 +1,18 @@
 Projeto de automação para estudos
 
-Projeto desenvolvido com Ruby, utilizando Selenium e Cucumber
+Projeto desenvolvido com Ruby, utilizando Capibara, Selenium e Cucumber
+
+Todo o projeto está estruturado no conceito de page objects.
+
 
 Antes de rodar, seguir os seguintes passos:
 - Baixar a versão mais atualizada do projeto no githubg
-- instalar as dependências com o comando bundle install
+
+- instalar as dependências com o comando
+    bundle install
 
 Para executar o projeto basta rodar o comando 
     - bundle exec cucumber
 
 Para executar um cenário específico:
-    - bundle exec cucumber --t @<nome_cenário>
+    - bundle exec cucumber --t @<nome_cenario>
