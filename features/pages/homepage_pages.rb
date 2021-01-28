@@ -5,7 +5,7 @@ class HomePage < SitePrism::Page
     element :extratoIcon, 'i[class*="fa-history"]'
     element :settingsIcon, 'i[class*="fa-cog"]'
     element :dropdownMenu, 'div[class*="dropdown-menu"]'
-    element :menuOption, 'a[href*="contas"]'
+    element :contasOption, 'a[href*="contas"]'
     element :resetOption, 'a[href*="reset"]'
     element :logoutOption, 'a[href*="logout"]'
     element :tableAccouts, 'table[class*="table-bordered"]'
@@ -39,5 +39,25 @@ class HomePage < SitePrism::Page
         settingsIcon.click
         wait_until_logoutOption_visible
         logoutOption.click
+    end
+
+    def loadContas
+        settingsIcon.click
+        wait_until_contasOption_visible
+        contasOption.click
+    end
+
+    def loadHistory
+        settingsIcon.click
+        wait_until_extratoIcon_visible
+        extratoIcon.click
+    end
+    
+    def loadMovement
+        movementIcon.click
+    end
+
+    def loadHome
+        homeIcon.click
     end
 end

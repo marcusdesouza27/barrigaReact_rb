@@ -12,8 +12,43 @@ When("user clicks in Resetar option") do
     @home.logout()
   end                                                                          
                                                                                
-  Then("session is closed in site") do                                         
+  Then("session is closed in site") do   
+    expect(page).to have_current_path('https://barrigareact.wcaquino.me/login')                                       
     @home.valida_alert()
     expect(@home.alert.text).to have_content(DATA['logout'])
     @home.close_alert()
-  end                                                                          
+  end
+
+  When("user clics in Contas option") do
+    @home.loadContas()
+    sleep(4)
+  end
+  
+  Then("Contas page has loaded") do
+    expect(page).to have_current_path('https://barrigareact.wcaquino.me/contas')  
+    expect(page).to have_content('Contas')
+  end
+
+  When("user clics in Extrato option") do                                        
+    @home.load_extrato()  
+  end                                                                            
+                                                                                 
+  Then("Extrato page has loaded") do                                             
+    expect(page).to have_current_path('https://barrigareact.wcaquino.me/extrato')  
+  end                                                                            
+
+  When("user clics in Movimentações option") do
+    @home.loadMovement()
+  end
+  
+  Then("Movement page has loaded") do
+    expect(page).to have_current_path('https://barrigareact.wcaquino.me/movimentacao') 
+  end
+
+  When("user clics in Home option") do                                          
+    @home.loadHome()
+  end                                                                           
+                                                                                
+  Then("Home page has loaded") do                                               
+    expect(page).to have_current_path('https://barrigareact.wcaquino.me/') 
+  end                                                                           
