@@ -9,6 +9,7 @@ Given('User loads homepage') do
   Then('user can see his logged area') do
     @home.valida_alert()
     expect(@home.alert.text).to eql(MESSAGE_ASSERT['login_sucess'])
+    @home.close_alert()
     expect(page).to have_content("Conta")
   end            
   
@@ -22,4 +23,5 @@ Given('User loads homepage') do
   Then("can see alert about invalid login") do
     @home.valida_alert()
     expect(@home.alert.text).to have_content(DATA['login_fail'])
+    @home.close_alert()
   end

@@ -1,3 +1,4 @@
 login_sucess: Bem vindo, henrique!
 login_fail: Request failed
 reset_alert: Dados resetados com sucesso!
+logout: Até logo!
