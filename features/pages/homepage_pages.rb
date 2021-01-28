@@ -8,7 +8,7 @@ class HomePage < SitePrism::Page
     element :contasOption, 'a[href*="contas"]'
     element :resetOption, 'a[href*="reset"]'
     element :logoutOption, 'a[href*="logout"]'
-    element :tableAccouts, 'table[class*="table-bordered"]'
+    element :tableAccounts, 'table[class*="table-bordered"]'
     element :alert, 'div[class="toast-message"]'
     element :alert_close_icon, 'button[class="toast-close-button"]'
 
@@ -52,7 +52,7 @@ class HomePage < SitePrism::Page
         wait_until_extratoIcon_visible
         extratoIcon.click
     end
-    
+
     def loadMovement
         movementIcon.click
     end
