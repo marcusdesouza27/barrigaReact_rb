@@ -6,6 +6,10 @@ require 'ffi'
 require 'pry'
 require 'cpf_faker'
 require 'site_prism'
+require 'httparty'
+
+DATA = YAML.load_file("features/fixtures/data.yml")
+MESSAGE_ASSERT = YAML.load_file("features/fixtures/messages.yml")
 
 Capybara.register_driver :selenium_chrome do |app|
     chrome_options = Selenium::WebDriver::Chrome::Options.new.tap do |options|
