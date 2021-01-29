@@ -5,6 +5,7 @@ Before do
     @login = LoginPage.new
     @home = HomePage.new
     @contas = ContasPage.new
+    @extrato = ExtratoPage.new
 end
 
 After do |scenario|
