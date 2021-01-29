@@ -2,3 +2,6 @@ login_sucess: Bem vindo, henrique!
 login_fail: Request failed
 reset_alert: Dados resetados com sucesso!
 logout: Até logo!
+add_account_success: Conta inserida com sucesso!
+edit_account_success: Conta atualizada com sucesso!
+remove_account_success: Conta excluída com sucesso!

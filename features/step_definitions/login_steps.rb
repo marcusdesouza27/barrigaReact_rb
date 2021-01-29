@@ -9,8 +9,9 @@ Given('User loads homepage') do
   Then('user can see his logged area') do
     @home.valida_alert()
     expect(@home.alert.text).to eql(MESSAGE_ASSERT['login_sucess'])
-    @home.close_alert()
     expect(page).to have_content("Conta")
+    sleep(0.5)
+    @home.close_alert()
   end            
   
   When("user types wrong email to signin") do
