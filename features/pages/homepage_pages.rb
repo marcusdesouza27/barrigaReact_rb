@@ -12,21 +12,16 @@ class HomePage < SitePrism::Page
     element :alert, 'div[class="toast-message"]'
     element :alert_close_icon, 'button[class="toast-close-button"]'
 
-    def load_extrato
-        extratoIcon.click
-    end
-
     def valida_page_loaded
         wait_until_tableAccount_present
     end
 
-    def valida_alert()
+    def valida_alert
         wait_until_alert_visible
         mensagem = alert.text
     end
     def close_alert
-        wait_until_alert_close_icon_visible
-        alert_close_icon.click
+        wait_until_alert_invisible
     end
 
     def reset
@@ -39,6 +34,10 @@ class HomePage < SitePrism::Page
         settingsIcon.click
         wait_until_logoutOption_visible
         logoutOption.click
+    end
+
+    def load_extrato
+        extratoIcon.click
     end
 
     def loadContas

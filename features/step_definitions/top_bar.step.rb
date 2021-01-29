@@ -8,8 +8,9 @@ When("user clicks in Resetar option") do
     @home.close_alert()
   end
 
-  When("user clicks in Sair option") do                                        
+  When("user clicks in Sair option") do                                     
     @home.logout()
+    @home.close_alert()
   end                                                                          
                                                                                
   Then("session is closed in site") do   
@@ -21,7 +22,6 @@ When("user clicks in Resetar option") do
 
   When("user clics in Contas option") do
     @home.loadContas()
-    sleep(4)
   end
   
   Then("Contas page has loaded") do
@@ -29,7 +29,7 @@ When("user clicks in Resetar option") do
     expect(page).to have_content('Contas')
   end
 
-  When("user clics in Extrato option") do                                        
+  When("user clics in Extrato option") do                                    
     @home.load_extrato()  
   end                                                                            
                                                                                  
@@ -45,7 +45,7 @@ When("user clicks in Resetar option") do
     expect(page).to have_current_path('https://barrigareact.wcaquino.me/movimentacao') 
   end
 
-  When("user clics in Home option") do                                          
+  When("user clics in Home option") do                                       
     @home.loadHome()
   end                                                                           
                                                                                 
