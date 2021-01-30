@@ -6,6 +6,7 @@ Before do
     @home = HomePage.new
     @contas = ContasPage.new
     @extrato = ExtratoPage.new
+    @movimentacao = MovimentacaoPage.new
 end
 
 After do |scenario|

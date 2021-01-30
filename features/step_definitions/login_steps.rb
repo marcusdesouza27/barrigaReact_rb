@@ -23,6 +23,6 @@ Given('User loads homepage') do
 
   Then("can see alert about invalid login") do
     @home.valida_alert()
-    expect(@home.alert.text).to have_content(DATA['login_fail'])
+    expect(@home.alert.text).to have_content(DATA['alert_error'])
     @home.close_alert()
   end

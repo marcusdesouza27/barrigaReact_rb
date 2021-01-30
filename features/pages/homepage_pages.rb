@@ -36,7 +36,7 @@ class HomePage < SitePrism::Page
         logoutOption.click
     end
 
-    def load_extrato
+    def loadExtrato
         extratoIcon.click
     end
 

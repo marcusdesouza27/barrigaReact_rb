@@ -21,3 +21,8 @@ Scenario: Edit an existent Account
 Scenario: Remove an existent Account
     When user removes an existent account
     Then user cannot see the account in table
+
+@existentAccount
+Scenario: Try create an account with same name
+    When user adds an account with an existent name
+    Then he see alert about existent account
