@@ -1,3 +1,11 @@
 login_sucess: Bem vindo, henrique!
-login_fail: Request failed
+alert_error_400: Request failed with status code 400
+alert_error_401: Request failed with status code 401
 reset_alert: Dados resetados com sucesso!
+logout: Até logo!
+add_account_success: Conta inserida com sucesso!
+edit_account_success: Conta atualizada com sucesso!
+remove_account_success: Conta excluída com sucesso!
+mov_add_success: Movimentação inserida com sucesso!
+mov_updated_success: Movimentação alterada com sucesso!
+mov_delete_success: Movimentação removida com sucesso!
