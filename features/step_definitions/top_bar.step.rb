@@ -14,9 +14,7 @@ When("user clicks in Resetar option") do
   end                                                                          
                                                                                
   Then("session is closed in site") do   
-    expect(page).to have_current_path('https://barrigareact.wcaquino.me/login')                                       
-    @home.valida_alert()
-    expect(@home.alert.text).to have_content(DATA['logout'])
+    expect(page).to have_current_path('https://barrigareact.wcaquino.me/login')
     @home.close_alert()
   end
 
@@ -30,7 +28,7 @@ When("user clicks in Resetar option") do
   end
 
   When("user clics in Extrato option") do                                    
-    @home.load_extrato()  
+    @home.loadExtrato()  
   end                                                                            
                                                                                  
   Then("Extrato page has loaded") do                                             
